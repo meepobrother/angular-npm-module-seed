@@ -1,7 +1,7 @@
 {
-  "name": "ng-packaged",
-  "version": "0.0.0",
-  "private": true,
+  "name": "ng-antd-mobile",
+  "version": "1.0.0",
+  "private": false,
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -11,9 +11,11 @@
     "build:lib": "rimraf dist && ng-packagr -p my-lib/package.json",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "./node_modules/.bin/compodoc my-lib -p ./tsconfig.json"
   },
   "dependencies": {
+    "@angular/cdk": "^5.1.0",
     "@angular/common": "~5.2.0",
     "@angular/compiler": "~5.2.0",
     "@angular/core": "~5.2.0",
@@ -22,7 +24,9 @@
     "@angular/platform-browser": "~5.2.0",
     "@angular/platform-browser-dynamic": "~5.2.0",
     "@angular/router": "~5.2.0",
+    "@compodoc/compodoc": "^1.0.5",
     "core-js": "^2.4.1",
+    "meepo-utils": "^1.0.0-alpha.0",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
@@ -47,8 +51,8 @@
     "protractor": "~5.2.0",
     "rimraf": "^2.6.1",
     "ts-node": "~4.1.0",
-    "tslint": "~5.9.0",
     "tsickle": "^0.26.0",
+    "tslint": "~5.9.0",
     "typescript": "~2.6.1"
   }
 }
